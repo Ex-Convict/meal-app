@@ -1,6 +1,6 @@
 # Next.js + Supabase + PostgreSQL
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js (TypeScript)
 - **Backend**: Next.js API Routes
@@ -14,8 +14,8 @@
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/theyinda/meal-app.git
+   cd meal-app
    ```
 
 2. **Install dependencies:**
@@ -24,7 +24,7 @@
    npm install
    ```
 
-3. **Set up environment variables** in `.env.local`:
+3. **Set up environment variables** in `.env`:
 
    ```sh
    NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
@@ -36,6 +36,6 @@
    npm run dev
    ```
 
-## 🚀 Deployment
+## Deployment
 
 - **Vercel:** Push to GitHub, then connect the repo on Vercel.
