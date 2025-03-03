@@ -72,6 +72,12 @@ Run migrations to apply changes to the database:
 
 ````
 
+6. **Run this to check for lint errors before commiting:**
+
+   ```sh
+   npm run lint
+   ```
+
 ## Deployment
 
 - **Railway:** Push your changes to GitHub, and Railway will automatically deploy your app.
