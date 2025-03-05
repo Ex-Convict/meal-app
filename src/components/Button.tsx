@@ -67,13 +67,13 @@ const IButton = ({
 
   const backgroundColorMap = {
     default: {
-      contained: "#F97316",
+      contained: "rgba(249, 115, 22, 1)",
       text: "transparent",
       outlined: "transparent",
     },
     hover: {
       contained: "rgba(218, 111, 3, 0.99)",
-      outlined: "#F97316",
+      outlined: "rgba(249, 115, 22, 1)",
       text: "#F5F5FA",
     },
     disabled: "rgba(251, 163, 75, 0.3)",
@@ -132,7 +132,7 @@ const IButton = ({
       disabled={blockAction || disabled || loading}
       variant={variant}
       sx={{
-        borderRadius: "2rem",
+        borderRadius: "8px",
         padding: getPadding(windowInnerWidth),
         minWidth: "fit-content",
         fontSize: ".875rem",
@@ -149,7 +149,7 @@ const IButton = ({
         boxShadow: "none",
         cursor: "pointer",
         color,
-        border: variant === "outlined" ? "1px solid  #F97316" : "none",
+        border: variant === "outlined" ? "1px solid  rgba(249, 115, 22, 1)" : "none",
         "&:disabled": {
           cursor: "not-allowed",
           pointerEvents: "all !important",

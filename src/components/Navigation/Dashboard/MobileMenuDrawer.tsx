@@ -1,9 +1,9 @@
-import { DashboardNavigation, HomeNavigation } from "@/constants/navigation";
+import { DashboardNavigation } from "@/constants/navigation";
 import { Box, Drawer } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import MenuItem from "../Navigation/Dashboard/MenuItem";
-import CustomButton from "../Button";
+import CustomButton from "../../Button";
+import MenuItem from "./MenuItem";
 
 interface MobileMenuDrawerProps {
   open: boolean;
@@ -41,10 +41,11 @@ const MobileMenuDrawer = ({ open, onClose }: MobileMenuDrawerProps) => {
     >
       <Box sx={{ position: "relative", height: "calc(100% - 5rem)" }}>
         <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-          {HomeNavigation.map((nav, index) => (
+          {DashboardNavigation.map((nav, index) => (
             <MenuItem
               key={index}
               title={nav.name}
+              icon={nav.icon}
               route={nav.navigation}
               active={nav.name === activeElement}
               onClick={handleMenuNavigation}
@@ -52,7 +53,7 @@ const MobileMenuDrawer = ({ open, onClose }: MobileMenuDrawerProps) => {
           ))}
         </Box>
         <CustomButton
-          text="Get Started"
+          text="Log Out"
           sx={{
             width: "calc(100% - 4rem)",
             fontSize: "1.2rem",

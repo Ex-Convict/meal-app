@@ -1,10 +1,11 @@
 import React from "react";
 import {
-  FormatListBulleted,
-  Home,
-  HomeOutlined,
-  LibraryBooks,
-  LibraryBooksOutlined,
+  Lightbulb,
+  LightbulbOutlined,
+  Person,
+  PersonOutlineOutlined,
+  Restaurant,
+  RestaurantOutlined,
   SetMeal,
   SetMealOutlined,
   SettingsSuggest,
@@ -12,14 +13,43 @@ import {
 } from "@mui/icons-material";
 import { SvgIcon } from "@mui/material";
 
-export const SideNavigation = [
+export const HomeNavigation = [
+  {
+    name: "How it works",
+    navigation: "/",
+  },
+  {
+    name: "Features",
+    navigation: "/",
+  },
+  {
+    name: "Testimonials",
+    navigation: "/",
+  },
+  {
+    name: "Contact",
+    navigation: "/",
+  },
+]
+export const DashboardNavigation = [
   {
     name: "Dashboard",
     navigation: "/",
     icon: {
-      active: <SvgIcon component={Home} inheritViewBox color="inherit" />,
+      active: (
+        <SvgIcon
+          component={Person}
+          inheritViewBox
+          color="inherit"
+          sx={{ color: "rgba(218, 111, 3, 0.99)" }}
+        />
+      ),
       default: (
-        <SvgIcon component={HomeOutlined} inheritViewBox color="inherit" />
+        <SvgIcon
+          component={PersonOutlineOutlined}
+          inheritViewBox
+          color="inherit"
+        />
       ),
     },
   },
@@ -28,14 +58,15 @@ export const SideNavigation = [
     navigation: "/recommendations",
     icon: {
       active: (
-        <SvgIcon component={LibraryBooks} inheritViewBox color="inherit" />
-      ),
-      default: (
         <SvgIcon
-          component={LibraryBooksOutlined}
+          component={Lightbulb}
           inheritViewBox
           color="inherit"
+          sx={{ color: "rgba(218, 111, 3, 0.99)" }}
         />
+      ),
+      default: (
+        <SvgIcon component={LightbulbOutlined} inheritViewBox color="inherit" />
       ),
     },
   },
@@ -44,10 +75,14 @@ export const SideNavigation = [
     navigation: "/recipes",
     icon: {
       default: (
+        <SvgIcon component={Restaurant} inheritViewBox color="inherit" />
+      ),
+      active: (
         <SvgIcon
-          component={FormatListBulleted}
+          component={RestaurantOutlined}
           inheritViewBox
           color="inherit"
+          sx={{ color: "rgba(218, 111, 3, 0.99)" }}
         />
       ),
     },
@@ -59,7 +94,14 @@ export const SideNavigation = [
       default: (
         <SvgIcon component={SetMealOutlined} inheritViewBox color="inherit" />
       ),
-      active: <SvgIcon component={SetMeal} inheritViewBox color="inherit" />,
+      active: (
+        <SvgIcon
+          component={SetMeal}
+          inheritViewBox
+          color="inherit"
+          sx={{ color: "rgba(218, 111, 3, 0.99)" }}
+        />
+      ),
     },
   },
   {
@@ -74,7 +116,12 @@ export const SideNavigation = [
         />
       ),
       active: (
-        <SvgIcon component={SettingsSuggest} inheritViewBox color="inherit" />
+        <SvgIcon
+          component={SettingsSuggest}
+          inheritViewBox
+          color="inherit"
+          sx={{ color: "rgba(218, 111, 3, 0.99)" }}
+        />
       ),
     },
   },
