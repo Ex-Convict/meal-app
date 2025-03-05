@@ -1,10 +1,14 @@
 import CustomButton from "@/components/Button";
-import { Delete } from "@mui/icons-material";
+import TextComponent from "@/components/TextComponent";
 
 export default function Home() {
   return (
     <div>
-      <h1>Welcome to My Next.js App</h1>
+      <TextComponent headerText text="Header Text" />
+      <TextComponent sectionHeader text="Section Header Text" />
+      <TextComponent subHeaderText text="Sub Header Text" />
+      <TextComponent bodyText text="Body Text" />
+      <TextComponent smallBodyText text="Small Body Text" />
     </div>
   );
 }
