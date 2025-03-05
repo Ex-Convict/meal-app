@@ -13,7 +13,6 @@ export default function Home() {
         <TextComponent subHeaderText text="Sub Header Text" />
         <TextComponent bodyText text="Body Text" />
         <TextComponent smallBodyText text="Small Body Text" />
-        <CustomButton label="Click Me" />
       </Box>
     </div>
   );
